@@ -12,6 +12,6 @@ OpenSource automation system for pre-autonomous vehicles
 
 **MOST IMPORTANTLY:**
 
-When your issue is completed, it shouldn't be closed until you update the documentation in docs/
+When your issue is completed, it shouldn't be closed until you update the documentation in appropriate directory
 
 If you do not want to write documentation, ping @amzoo and he will assist
