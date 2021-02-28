@@ -1,0 +1,3 @@
+[submodule "OpenTorque-Actuator-6368"]
+	path = OpenTorque-Actuator-6368
+	url = git@github.com:Smurf/OpenTorque-Actuator-6368.git
