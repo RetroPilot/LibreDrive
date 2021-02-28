@@ -11,7 +11,7 @@ General documentation for development surrounding the steering actuator
 
 - Contributors: smurf
 - Status: WIP
-- Link: 
+- [Link to Files](https://github.com/RetroPilot/LibreDrive/tree/main/actuators/steering/full-stupid)
 
 ### Second model 
 
