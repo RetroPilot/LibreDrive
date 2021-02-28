@@ -5,7 +5,6 @@ General documentation for development surrounding the steering actuator
 - Does not interfere with drivers hands
 - Able to be over-powered by human with ?N of force
 
-
 ## Models
 
 ### Clippy on the Wheely

@@ -7,6 +7,7 @@ General documentation for development surrounding the brake actuator
 - Can withstand human input of 2500N
 - Does not restrict pedal's full range of motion
 
+
 ## Models
 
 ### Clippy on the Brakey
