@@ -1,0 +1,3 @@
+[submodule "actuators/steering/full-stupid"]
+	path = actuators/steering/full-stupid
+	url = git@github.com:RetroPilot/full-stupid.git
