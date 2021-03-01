@@ -8,6 +8,42 @@ General documentation for development surrounding the steering actuator
 - Able to turn steering wheel with ~5 NM of force (need to verify)
 - 300mm OD Drive Ring
 
+## Subcomponents / TODO
+
+- Microcontroller selection
+    - Teensy or STM32?
+
+- PCB design
+
+    - Physical dimensions / layout
+    - Power supply
+
+- Motor selection
+
+    - Type, specifications
+
+- Angle sensor / position feedback
+    - Theory of operation
+
+- User override detection
+    - Theory of operation
+
+- Firmware
+
+    - CAN I/O specification
+    - Motor control algorithm
+    - Go home mode specification
+    - Self-testing and error reporting
+    - Safety
+
+- Mechanical Design
+
+    - Mechanical specifications
+    - Gearing for motor / actuation
+    - Gearing for angle sensor
+    - Column mount
+    - Wheel mount system
+
 ## Models
 
 ### Full Stupid
@@ -17,6 +53,13 @@ General documentation for development surrounding the steering actuator
 - Contributors: smurf
 - Status: WIP
 - [Link to Files](https://github.com/RetroPilot/full-stupid/tree/master)
+
+### retropilot-drivetronik
+
+- Contributors: wocsor
+- Status: WIP, tested actuaton on 2003 Toyota Celica
+    - [Video](https://youtu.be/OpUxE-Uwttc)
+- [Link to Files](https://github.com/wocsor/retropilot-drivetronik)
 
 ### Second model 
 
