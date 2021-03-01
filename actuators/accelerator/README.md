@@ -1,4 +1,4 @@
-# Brake Acutator
+# Accelerator Acutator
 General documentation for development surrounding the accelerator actuator
 
 ## Requirements
