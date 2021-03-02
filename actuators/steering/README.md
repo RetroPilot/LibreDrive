@@ -2,11 +2,26 @@
 General documentation for development surrounding the steering actuator
 
 ## Requirements
-- Under $150 for complete BOM
+Note: ** double asterisks mark soft requirements that can be changed. This allows us
+to determine other requirements in order to move on with a design
+
+General
+- ** Under $150 for complete BOM
+  
+Mechanical
+- Peak Torque: ~5 Nm (needs verification)
+- Peak Rate: 400 deg/s
+- ** 300mm OD Driven Ring
+- ** 18mm OD Drive Gear
+
+Electrical
+- ** Estimated Power: ~25W
+- ** Input Voltage: 12V
+- ** Estimated Current: 2.9A
+
+Human Centric
 - Does not interfere with drivers hands
-- Able to be over-powered by human with ?N of force
-- Able to turn steering wheel with ~5 NM of force (need to verify)
-- 300mm OD Drive Ring
+- Able to be over-powered and software shutdown after sustained input force
 
 ## Subcomponents / TODO
 

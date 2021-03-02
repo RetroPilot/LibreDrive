@@ -20,6 +20,8 @@ Cons
 
 ### Why use BLDC (Brushless DC) motors?
 
+[ODrive Brushless Motor Selection](https://docs.google.com/spreadsheets/d/12vzz7XVEK6YNIOqH0jAz51F5VUpc-lJEs3mmkWP1H4Y/edit#gid=0)
+
 Pros
 - High speed low torque
 - Smooth operation
