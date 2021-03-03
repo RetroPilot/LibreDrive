@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Low Speed Steering",
+        "type": "steering",
+        "inputs": {
+            "forces": {
+                "steering_torque_Nm": 5,
+                "peak_rate_deg/s": 100
+            },
+            "dimensions": {
+                "drive_wheel_dia_mm": 16,
+                "driven_ring_dia_mm": 300,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.0515,
+                "motor_velocity_RPM": 1618.75,
+                "tension_N": 33.3333
+            },
+            "electrical": {
+                "estimated_power_W": 8.7271,
+                "estimated_current_A": 0.7273
+            }
+        }
+    },
+    {
+        "name": "High Speed Steering",
+        "type": "steering",
+        "inputs": {
+            "forces": {
+                "steering_torque_Nm": 5,
+                "peak_rate_deg/s": 2000
+            },
+            "dimensions": {
+                "drive_wheel_dia_mm": 16,
+                "driven_ring_dia_mm": 300,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.0515,
+                "motor_velocity_RPM": 32375.0,
+                "tension_N": 33.3333
+            },
+            "electrical": {
+                "estimated_power_W": 174.542,
+                "estimated_current_A": 14.5452
+            }
+        }
+    }
+]
