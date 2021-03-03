@@ -5,7 +5,7 @@
         "inputs": {
             "forces": {
                 "steering_torque_Nm": 5,
-                "peak_rate_deg/s": 100
+                "peak_rate_deg/s": 400
             },
             "dimensions": {
                 "drive_wheel_dia_mm": 16,
@@ -19,12 +19,12 @@
         "outputs": {
             "forces": {
                 "motor_torque_Nm": 0.0515,
-                "motor_velocity_RPM": 1618.75,
+                "motor_velocity_RPM": 6475.0,
                 "tension_N": 33.3333
             },
             "electrical": {
-                "estimated_power_W": 8.7271,
-                "estimated_current_A": 0.7273
+                "estimated_power_W": 34.9084,
+                "estimated_current_A": 2.909
             }
         }
     },
@@ -34,7 +34,7 @@
         "inputs": {
             "forces": {
                 "steering_torque_Nm": 5,
-                "peak_rate_deg/s": 2000
+                "peak_rate_deg/s": 1000
             },
             "dimensions": {
                 "drive_wheel_dia_mm": 16,
@@ -48,12 +48,70 @@
         "outputs": {
             "forces": {
                 "motor_torque_Nm": 0.0515,
-                "motor_velocity_RPM": 32375.0,
+                "motor_velocity_RPM": 16187.5,
                 "tension_N": 33.3333
             },
             "electrical": {
-                "estimated_power_W": 174.542,
-                "estimated_current_A": 14.5452
+                "estimated_power_W": 87.271,
+                "estimated_current_A": 7.2726
+            }
+        }
+    },
+    {
+        "name": "Low Speed Braking",
+        "type": "pedal",
+        "inputs": {
+            "forces": {
+                "pedal_force_N": 350,
+                "peak_actuation_time_s": 0.6,
+                "travel_distance_mm": 70
+            },
+            "dimensions": {
+                "driven_pulley_dia_mm": 25,
+                "gear_ratio": 3,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.2815,
+                "motor_velocity_RPM": 1385.03
+            },
+            "electrical": {
+                "estimated_power_W": 40.8355,
+                "estimated_current_A": 3.403
+            }
+        }
+    },
+    {
+        "name": "High Speed Braking",
+        "type": "pedal",
+        "inputs": {
+            "forces": {
+                "pedal_force_N": 700,
+                "peak_actuation_time_s": 0.3,
+                "travel_distance_mm": 70
+            },
+            "dimensions": {
+                "driven_pulley_dia_mm": 25,
+                "gear_ratio": 3,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.5631,
+                "motor_velocity_RPM": 2770.06
+            },
+            "electrical": {
+                "estimated_power_W": 163.3418,
+                "estimated_current_A": 13.6118
             }
         }
     }
