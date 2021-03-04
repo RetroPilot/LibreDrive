@@ -36,6 +36,46 @@ Option 3: 350N, 0.6s actuation time, 50mm travel
 - ** Input Voltage: 12V
 - ** Estimated Current: 1.75A
 
+## Subcomponents / TODO
+
+- Microcontroller selection
+    - STM32
+
+- PCB design
+
+    - Physical dimensions / layout
+    - Power supply
+
+- Motor selection
+
+    - Type, specifications
+
+- Pedal throw sensor
+
+    - angle sensor at fulcrum of pedal lever + magnet
+
+- User override detection
+
+    - strain gauge / pressure sensor on pedal surface
+    - emergency release state detection
+
+- Firmware
+
+    - CAN I/O specification
+    - Motor control algorithm
+    - Go home mode specification
+    - Self-testing and error reporting
+    - Safety
+
+- Mechanical Design
+
+    - Mechanical specifications
+    - Gearing for motor / actuator unit
+    - Sensor package mount on pedal surface
+    - Actuator unit mount
+    - Emergency physical release mechanism
+
+
 ## Models
 
 ### Clippy on the Brakey
