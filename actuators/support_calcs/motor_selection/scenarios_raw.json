@@ -1,0 +1,91 @@
+[
+    {
+        "name": "Low Speed Steering",
+        "type": "steering",
+        "inputs": {
+            "forces": {
+                "steering_torque_Nm": 5,
+                "peak_rate_deg/s": 400
+            },
+            "dimensions": {
+                "drive_wheel_dia_mm": 16,
+                "driven_ring_dia_mm": 300,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.0515,
+                "motor_velocity_RPM": 16187.5,
+                "tension_N": 33.3333
+            },
+            "electrical": {
+                "estimated_power_W": 87.271,
+                "estimated_current_A": 7.2726
+            }
+        }
+    },
+
+    {
+        "name": "High Speed Steering",
+        "type": "steering",
+        "inputs": {
+            "forces": {
+                "steering_torque_Nm": 5,
+                "peak_rate_deg/s": 1000
+            },
+            "dimensions": {
+                "drive_wheel_dia_mm": 16,
+                "driven_ring_dia_mm": 300,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.0515,
+                "motor_velocity_RPM": 16187.5,
+                "tension_N": 33.3333
+            },
+            "electrical": {
+                "estimated_power_W": 87.271,
+                "estimated_current_A": 7.2726
+            }
+        }
+    },
+
+    {
+        "name": "High Speed Braking",
+        "type": "pedal",
+        "inputs": {
+            "forces": {
+                "pedal_force_N": 700,
+                "peak_actuation_time_s": 0.3,
+                "travel_distance_mm": 70
+            },
+            "dimensions": {
+                "driven_pulley_dia_mm": 25,
+                "gear_ratio" : 3,
+                "gearbox_ratio": 5.18
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "motor_torque_Nm": 0.0515,
+                "motor_velocity_RPM": 16187.5
+            },
+            "electrical": {
+                "estimated_power_W": 87.271,
+                "estimated_current_A": 7.2726
+            }
+        }
+    }
+]

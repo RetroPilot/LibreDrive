@@ -2,7 +2,7 @@ import json
 import argparse
 
 general = ['name', 'type']
-types = ['steering', 'pedal']
+types = ['steering', 'pedal','hydro']
 
 steering = {
     'inputs': {
@@ -24,6 +24,18 @@ pedal = {
     },
     'outputs': {
         'forces': ['motor_torque_Nm', 'motor_velocity_RPM'],
+        'electrical': ['estimated_power_W', 'estimated_current_A']
+    }
+}
+
+hydro = {
+    'inputs': {
+        'forces': ['output_pressure_KPa', 'peak_actuation_time_s', 'travel_distance_mm'],
+        'dimensions': ['gear_ratio', 'gearbox_ratio', 'cylinder_bore_mm'],
+        'electrical': ['voltage_V']
+    },
+    'outputs': {
+        'forces': ['pushrod_force_N', 'motor_torque_Nm', 'motor_velocity_RPM', 'drive_gear_velocity_RPM', 'driven_rack_velocity_mm/s'],
         'electrical': ['estimated_power_W', 'estimated_current_A']
     }
 }
@@ -103,6 +115,44 @@ def main(args):
 
             data['outputs']['forces']['motor_torque_Nm'] = round(motor_torque_Nm, precision)
             data['outputs']['forces']['motor_velocity_RPM'] = round(motor_velocity_RPM, precision)
+
+            data['outputs']['electrical']['estimated_power_W'] = round(estimated_power_W, precision)
+            data['outputs']['electrical']['estimated_current_A'] = round(estimated_current_A, precision)
+
+        elif data['type'] == 'hydro':
+            # Data assertions
+            assert_data_format(data, hydro)
+
+            # inputs
+            output_pressure_KPa = data['inputs']['forces']['output_pressure_KPa']
+            peak_actuation_time_s = data['inputs']['forces']['peak_actuation_time_s']
+            travel_distance_mm = data['inputs']['forces']['travel_distance_mm']
+            drive_gear_dia_mm = data['inputs']['dimensions']['drive_gear_dia_mm']
+            cylinder_bore_mm = data['inputs']['dimensions']['cylinder_bore_mm']
+            pedal_ratio = data['inputs']['dimensions']['pedal_ratio']
+            gear_ratio = data['inputs']['dimensions']['gear_ratio']
+            gearbox_ratio = data['inputs']['dimensions']['gearbox_ratio']
+            voltage_V = data['inputs']['electrical']['voltage_V']
+
+            # outputs
+            precision = args.precision
+            bore_area_m2 = pi*(cylinder_bore_mm/1000/2)**2
+            pushrod_force_N = output_pressure_KPa * 1000 * bore_area_m2
+            effective_pedal_force_N = pushrod_force_N / pedal_ratio
+            motor_torque_Nm = pushrod_force_N * (drive_gear_dia_mm/1000/2) / (gear_ratio * gearbox_ratio)
+            drive_gear_RPS = travel_distance_mm/peak_actuation_time_s / (pi*drive_gear_dia_mm)
+            driven_rack_velocity_mmps = drive_gear_dia_mm * pi * drive_gear_RPS
+            drive_gear_velocity_RPM = drive_gear_RPS * 60
+            motor_velocity_RPM = drive_gear_velocity_RPM * gear_ratio * gearbox_ratio
+            estimated_power_W = motor_torque_Nm * motor_velocity_RPM / 9.5488
+            estimated_current_A = estimated_power_W / voltage_V
+
+            data['outputs']['forces']['pushrod_force_N'] = round(pushrod_force_N, precision)
+            data['outputs']['forces']['effective_pedal_force_N'] = round(effective_pedal_force_N, precision)
+            data['outputs']['forces']['motor_torque_Nm'] = round(motor_torque_Nm, precision)
+            data['outputs']['forces']['motor_velocity_RPM'] = round(motor_velocity_RPM, precision)
+            data['outputs']['forces']['drive_gear_velocity_RPM'] = round(drive_gear_velocity_RPM, precision)
+            data['outputs']['forces']['driven_rack_velocity_mm/s'] = round(driven_rack_velocity_mmps, precision)
 
             data['outputs']['electrical']['estimated_power_W'] = round(estimated_power_W, precision)
             data['outputs']['electrical']['estimated_current_A'] = round(estimated_current_A, precision)

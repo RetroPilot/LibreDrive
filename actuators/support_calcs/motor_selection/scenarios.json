@@ -39,7 +39,7 @@
             "dimensions": {
                 "drive_wheel_dia_mm": 16,
                 "driven_ring_dia_mm": 300,
-                "gearbox_ratio": 5.18
+                "gearbox_ratio": 1
             },
             "electrical": {
                 "voltage_V": 12
@@ -47,8 +47,8 @@
         },
         "outputs": {
             "forces": {
-                "motor_torque_Nm": 0.0515,
-                "motor_velocity_RPM": 16187.5,
+                "motor_torque_Nm": 0.2667,
+                "motor_velocity_RPM": 3125.0,
                 "tension_N": 33.3333
             },
             "electrical": {
@@ -112,6 +112,41 @@
             "electrical": {
                 "estimated_power_W": 163.3418,
                 "estimated_current_A": 13.6118
+            }
+        }
+    },
+    {
+        "name": "Pass Thru Cylinder Braking",
+        "type": "hydro",
+        "inputs": {
+            "forces": {
+                "output_pressure_KPa": 8200,
+                "peak_actuation_time_s": 1.0,
+                "travel_distance_mm": 31.8
+            },
+            "dimensions": {
+                "drive_gear_dia_mm": 20,
+                "pedal_ratio": 6.21,
+                "gear_ratio": 15,
+                "gearbox_ratio": 1,
+                "cylinder_bore_mm": 12.7
+            },
+            "electrical": {
+                "voltage_V": 12
+            }
+        },
+        "outputs": {
+            "forces": {
+                "pushrod_force_N": 1038.7503,
+                "effective_pedal_force_N": 167.2706,
+                "motor_torque_Nm": 0.6925,
+                "motor_velocity_RPM": 455.5014,
+                "drive_gear_velocity_RPM": 30.3668,
+                "driven_rack_velocity_mm/s": 31.8
+            },
+            "electrical": {
+                "estimated_power_W": 33.034,
+                "estimated_current_A": 2.7528
             }
         }
     }
