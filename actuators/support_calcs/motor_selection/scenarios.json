@@ -67,9 +67,9 @@
                 "travel_distance_mm": 70
             },
             "dimensions": {
-                "driven_pulley_dia_mm": 25,
-                "gear_ratio": 3,
-                "gearbox_ratio": 5.18
+                "driven_pulley_dia_mm": 52,
+                "gear_ratio": 1,
+                "gearbox_ratio": 15
             },
             "electrical": {
                 "voltage_V": 12
@@ -77,8 +77,8 @@
         },
         "outputs": {
             "forces": {
-                "motor_torque_Nm": 0.2815,
-                "motor_velocity_RPM": 1385.03
+                "motor_torque_Nm": 0.6067,
+                "motor_velocity_RPM": 642.7411
             },
             "electrical": {
                 "estimated_power_W": 40.8355,
@@ -97,8 +97,8 @@
             },
             "dimensions": {
                 "driven_pulley_dia_mm": 25,
-                "gear_ratio": 3,
-                "gearbox_ratio": 5.18
+                "gear_ratio": 1,
+                "gearbox_ratio": 15
             },
             "electrical": {
                 "voltage_V": 12
@@ -106,8 +106,8 @@
         },
         "outputs": {
             "forces": {
-                "motor_torque_Nm": 0.5631,
-                "motor_velocity_RPM": 2770.06
+                "motor_torque_Nm": 0.5833,
+                "motor_velocity_RPM": 2673.803
             },
             "electrical": {
                 "estimated_power_W": 163.3418,
@@ -127,8 +127,8 @@
             "dimensions": {
                 "drive_gear_dia_mm": 20,
                 "pedal_ratio": 6.21,
-                "gear_ratio": 15,
-                "gearbox_ratio": 1,
+                "gear_ratio": 1,
+                "gearbox_ratio": 15,
                 "cylinder_bore_mm": 12.7
             },
             "electrical": {
