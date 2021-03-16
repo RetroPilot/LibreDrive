@@ -26,7 +26,8 @@ Human Centric
 ## Subcomponents / TODO
 
 - Microcontroller selection
-    - Teensy or STM32?
+
+    - STM32F205
 
 - PCB design
 
@@ -38,9 +39,11 @@ Human Centric
     - Type, specifications
 
 - Angle sensor / position feedback
+
     - Theory of operation
 
 - User override detection
+
     - Theory of operation
 
 - Firmware
