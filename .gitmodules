@@ -4,6 +4,3 @@
 [submodule "actuators/steering/retropilot-drivetronik"]
 	path = actuators/steering/retropilot-drivetronik
 	url = git@github.com:wocsor/retropilot-drivetronik.git
-[submodule "actuators/steering/amzoo-steering"]
-	path = actuators/steering/amzoo-steering
-	url = git@github.com:amzoo/selfdriving.git
