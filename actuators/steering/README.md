@@ -23,6 +23,35 @@ Human Centric
 - Does not interfere with drivers hands
 - Able to be over-powered and software shutdown after sustained input force
 
+Go Home Specification
+
+1. The system should be able to detect and report user inputs
+
+    1.1 User input torque (angle rate vs current motor voltage)
+
+    1.2 Steering wheel angle
+
+2. The system should be able to detect and report errors
+
+    - 2.1 Motor failures
+        - 2.1.1 jam
+        - 2.1.2 disconnected
+    - 2.2 Firmware check fail
+    - 2.3 Bus failures
+        - 2.3.1 CAN checksum
+        - 2.3.2 CAN message timeout
+        - 2.3.3 request exceeds limits
+3. The system should not override user inputs
+    - 3.1 The motor should supply a torque vector towards zero at the torque required to overcome static friction within the actuator
+        - 3.1.1 this will emulate true freewheeling, allowing the vehicle's power steering system to center the wheel as normally installed
+        - 3.1.2 this torque requirement can be found programmatically before installation. it should be directly proportional to a voltage value if we use SimpleFOC
+        - 3.1.3 reasonable static friction should not be very high, but we can make a very low estimate here
+    - 3.2 If the motor is consuming more energy than expected, the motor relays will disengage allowing the motor to freewheel
+        - 3.2.1 in this fail state, reporting is still enabled and the status code is communicated to the user
+        - 3.2.2 the expected energy map will be created for static friction of actuator +1Nm during the validation phase and burned into memory
+    - 3.3 A  physical disconnect will be implemented to detach the motor from the driven assembly
+        - 3.3.1 possibly solenoid clutches - if we use these we can add another check / error state for them
+
 ## Subcomponents / TODO
 
 - Microcontroller selection
