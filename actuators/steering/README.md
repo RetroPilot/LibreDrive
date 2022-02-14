@@ -1,4 +1,4 @@
-# Steering Acutator
+# Steering Actuator
 General documentation for development surrounding the steering actuator
 
 ## Requirements
@@ -113,3 +113,10 @@ Go Home Specification
 - Contributors: amzoo
 - Status: WIP
 - Link: 
+
+### retropilot-column-steering
+
+- Contributors: R3D
+- Status: WIP, untested
+- Goal: Control steering from the column using a belt-pulley system
+- [Link to Files](https://github.com/R3D347HR4Y/retropilot-column-steering)
