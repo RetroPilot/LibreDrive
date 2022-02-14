@@ -4,3 +4,6 @@
 [submodule "actuators/steering/retropilot-drivetronik"]
 	path = actuators/steering/retropilot-drivetronik
 	url = git@github.com:wocsor/retropilot-drivetronik.git
+[submodule "actuators/steering/retropilot-column-steering"]
+	path = actuators/steering/retropilot-column-steering
+	url = https://github.com/R3D347HR4Y/retropilot-column-steering
